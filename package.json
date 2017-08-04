@@ -13,7 +13,7 @@
     "copy:osx": "cpx \"./scratch2/**\" ./dist/osx/${npm_package_config_app}-darwin-x64/scratch2",
     "copy:win": "cpx \"./scratch2/**\" ./dist/win/%npm_package_config_app%-win32-x64/scratch2",
     "pack:mac": "npm run clean:osx && electron-packager ./app ${npm_package_config_app} --platform darwin --arch x64 --app-copyright='Yengawa Lab\nReleased under the MIT license' --out=./dist/osx --icon=./assets/osx/scrattino.icns --no-prune && npm run copy:osx",
-    "pack:win": "npm run clean:win && .\\node_modules\\.bin\\electron-packager .\\app %npm_package_config_app% --platform win32 --arch x64 --app-copyright='Yengawa Lab\nReleased under the MIT license' --out=.\\dist\\win --icon=.\\assets\\win\\scrattino.ico --no-prune && npm run copy:win",
+    "pack:win": "npm run clean:win && .\\node_modules\\.bin\\electron-packager .\\app %npm_package_config_app% --platform win32 --arch all --out=.\\dist\\win --app-copyright='Yengawa Lab\nReleased under the MIT license' --icon=.\\assets\\win\\scrattino.ico --no-prune && npm run copy:win",
     "release:mac": "rimraf release && build -m --x64"
   },
   "keywords": [
