@@ -1,0 +1,42 @@
+{
+  "extensionName": "Scrattino",
+  "extensionPort": 5410,
+  "url": "https://github.com/yokobond/scrattino2",
+  "blockSpecs": [
+    [" ", "INPUT %m.digitalPinNames mode %m.inputPinModes", "setMode", "D2", "PULLUP"],
+    [" ", "OUTPUT %m.digitalPinNames value %m.digitalValues", "digitalWrite", "D2", 0],
+    [" ", "PWM %m.digitalPinNames value %d.pwmValues", "analogWrite", "D2", 0],
+    [" ", "SERVO %m.digitalPinNames degree %d.servoValues", "servoWrite", "D2", 0],
+    ["-"],
+    ["r", "A0", "a0"],
+    ["r", "A1", "a1"],
+    ["r", "A2", "a2"],
+    ["r", "A3", "a3"],
+    ["r", "A4", "a4"],
+    ["r", "A5", "a5"],
+    ["-"],
+//    ["R", "value of %m.digitalPinNames", "pinValue", "D2"],
+    ["r", "D2", "d2"],
+    ["r", "D3", "d3"],
+    ["r", "D4", "d4"],
+    ["r", "D5", "d5"],
+    ["r", "D6", "d6"],
+    ["r", "D7", "d7"],
+    ["r", "D8", "d8"],
+    ["r", "D9", "d9"],
+    ["r", "D10", "d10"],
+    ["r", "D11", "d11"],
+    ["r", "D12", "d12"],
+    ["r", "D13", "d13"]
+  ],
+  "menus": {
+    "digitalPinNames": ["D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13"],
+    "analogPinNames": ["A0", "A1", "A2", "A3", "A4", "A5"],
+    "digitalPinModes": ["INPUT", "INPUT_PULLUP", "OUTPUT", "PWM", "SERVO"],
+    "inputPinModes": ["PULLUP", "PULLDOWN"],
+    "digitalValues": [0, 1],
+    "pwmValues": [0, 64, 128, 192, 255],
+    "servoValues": [0, 45, 90, 135, 180],
+    "analogValues": [0, 256, 512, 768, 1023]
+  }
+}

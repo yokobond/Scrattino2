@@ -1,0 +1,39 @@
+{
+  "name": "scrattino2",
+  "productName": "Scrattino2",
+  "version": "0.1.0",
+  "description": "Scratch2 offline editor extension for Arduino",
+  "main": "app/main.js",
+  "config": {
+    "app": "Scrattino2"
+  },
+  "scripts": {
+    "clean:osx": "rm -rf ./dist/osx",
+    "clean:win": "rm -rf .\\dist\\win",
+    "copy:osx": "cpx \"./scratch2/**\" ./dist/osx/${npm_package_config_app}-darwin-x64/scratch2",
+    "copy:win": "cpx \"./scratch2/**\" ./dist/win/%npm_package_config_app%-win32-x64/scratch2",
+    "pack:mac": "npm run clean:osx && electron-packager ./app ${npm_package_config_app} --platform darwin --arch x64 --app-copyright='Yengawa Lab\nReleased under the MIT license' --out=./dist/osx --icon=./assets/osx/scrattino.icns --no-prune && npm run copy:osx",
+    "pack:win": "npm run clean:win && .\\node_modules\\.bin\\electron-packager .\\app %npm_package_config_app% --platform win32 --arch x64 --app-copyright='Yengawa Lab\nReleased under the MIT license' --out=.\\dist\\win --icon=.\\assets\\win\\scrattino.ico --no-prune && npm run copy:win",
+    "release:mac": "rimraf release && build -m --x64"
+  },
+  "keywords": [
+    "Scratch",
+    "Arduino"
+  ],
+  "author": "yokobond",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "cpx": "^1.5.0",
+    "electron": "1.6.11",
+    "electron-builder": "^19.18.1",
+    "electron-debug": "^1.3.0",
+    "electron-devtools-installer": "^2.0.1",
+    "electron-packager": "^8.7.2",
+    "electron-rebuild": "^1.4.0",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+
+  }
+}
