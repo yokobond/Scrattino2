@@ -23,7 +23,7 @@ function BoardWindowService(firmataService) {
       boardData.MODES = board.MODES;
       boardData.isReady = board.isReady;
       boardData.portPath = board.transport.path;
-      boardData.isOpen = board.transport.isOpen();
+      boardData.isOpen = board.transport.isOpen;
     }
     event.sender.send('boardChanged', boardData);
   });
@@ -51,7 +51,7 @@ BoardWindowService.prototype.createBoardWindow = function (board) {
   //     boardData.MODES = this.board.MODES;
   //     boardData.isReady = this.board.isReady;
   //     boardData.portPath = this.board.transport.path;
-  //     boardData.isOpen = this.board.transport.isOpen();
+  //     boardData.isOpen = this.board.transport.isOpen;
   //     this.webContents.send('boardChanged', boardData);
   //   }.bind(newWindow),
   //   boardUpdateIntervalTime);

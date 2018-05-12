@@ -1,0 +1,10 @@
+#root {
+  padding-top: 0;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-left: 15px;
+}
+
+html {
+  overflow-y: scroll;
+}

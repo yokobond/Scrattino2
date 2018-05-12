@@ -116,7 +116,7 @@ FirmataService.prototype.getBoard = function (portPath) {
 // List and add new found ports to portList.
 FirmataService.prototype.detectPorts = function () {
   // this.boardList.forEach(board => {
-  //   if (board.transport.isOpen()) {
+  //   if (board.transport.isOpen) {
   //     board.transport.close();
   //   }
   // });
@@ -203,7 +203,7 @@ FirmataService.prototype.removeLostPorts = function () {
 };
 
 FirmataService.prototype.removeBoard = function (board) {
-  if (board.transport.isOpen()) board.transport.close();
+  if (board.transport.isOpen) board.transport.close();
   let old = this.boardList;
   this.boardList = this.boardList.filter(bd => (bd !== board));
   if (old.length !== this.boardList.length) {

@@ -33,7 +33,7 @@ ScrattinoServer.prototype.createServer = function () {
   server.on('request', (req, res) => {
     let targetBoard = this.firmataService.getBoard(); // only one board can be used at this version.
     let content = '';
-    if (targetBoard && targetBoard.transport.isOpen()) {
+    if (targetBoard && targetBoard.transport.isOpen) {
       let path = req.url.split('/');
       if (path[1] == 'poll') {
         let pinValue;
