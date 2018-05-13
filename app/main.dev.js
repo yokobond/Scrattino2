@@ -280,9 +280,9 @@ if (process.platform === 'darwin') {
   template[3].submenu.push({
     type: 'separator'
   }, {
-    label: 'Bring All to Front',
-    role: 'front'
-  });
+      label: 'Bring All to Front',
+      role: 'front'
+    });
 
   addUpdateMenuItems(template[0].submenu, 1);
 }
@@ -358,8 +358,10 @@ app.on('before-quit', (event) => {
 });
 
 app.on('will-quit', (event) => {
-  // to prevent remain icon in dock on MacOS
-  app.dock.hide();
+  if (process.platform === 'darwin') {
+    // to prevent remain icon in dock on MacOS
+    app.dock.hide();
+  }
 });
 
 
