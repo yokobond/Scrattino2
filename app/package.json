@@ -1,7 +1,7 @@
 {
   "name": "scrattino2",
   "productName": "Scrattino2",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Scratch2 offline editor extension for Arduino",
   "main": "./main.prod.js",
   "author": {
