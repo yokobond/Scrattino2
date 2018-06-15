@@ -125,6 +125,8 @@ ScrattinoServer.prototype.createServer = function () {
           let pinValue = parseInt(path[3]);
           targetBoard.servoWrite(pinIndex, pinValue);
         }
+      } else if (path[1] == 'sendString') {
+        targetBoard.sendString(decodeURIComponent(path[2]));
       }
     } else {
       // no target board
